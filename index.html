@@ -216,7 +216,12 @@
         <div class="contact-top"><span class="contact-dot"></span><span data-i18n="contactOverline">SIGUIENTE PASO / HABLEMOS</span><span class="contact-code">LSJ / 2026</span></div>
         <h2 id="contactTitle"><span data-i18n="contactTitle1">Los mejores proyectos</span><br><em data-i18n="contactTitle2">empiezan con una conversación.</em></h2>
         <p data-i18n="contactDesc">Interesado en GIS, ciencia de datos espaciales y proyectos de análisis territorial. Abierto a conectar con equipos y oportunidades profesionales, especialmente en remoto.</p>
-        <div class="contact-links" id="contactLinks" aria-live="polite"><span class="contact-pending" data-i18n="contactPending">En la siguiente fase añadiremos aquí los enlaces de contacto y el CV.</span></div>
+        <div class="contact-links" id="contactLinks" aria-live="polite">
+          <a class="contact-action" href="mailto:lucasinformatica27@gmail.com">Enviar email ↗</a>
+          <a class="contact-action secondary" href="https://www.linkedin.com/in/lucas-san-juan-jordan/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="contact-action secondary" href="https://github.com/lucassanjuan-GIS" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="contact-action secondary" href="assets/CV_Lucas_San_Juan_ES.pdf" download="CV_Lucas_San_Juan_ES.pdf">Descargar CV ↗</a>
+        </div>
         <div class="contact-watermark" aria-hidden="true">GEO / DATA</div>
       </div>
     </section>
@@ -294,6 +299,7 @@ function addContactButton(container, label, href, isSecondary = false) {
   link.className = 'contact-action' + (isSecondary ? ' secondary' : '');
   link.href = href;
   link.textContent = label + ' ↗';
+  if (href.toLowerCase().endsWith('.pdf')) link.setAttribute('download', href.split('/').pop());
   if (/^https?:\/\//.test(href)) {
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
