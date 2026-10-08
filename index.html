@@ -229,7 +229,7 @@ const CONTACT = {
   email: "lucasinformatica27@gmail.com",
   linkedin: "https://www.linkedin.com/in/lucas-san-juan-jordan/",
   github: "https://github.com/lucassanjuan-GIS",
-  cv: ""
+  cv: "assets/CV_Lucas_San_Juan_ES.pdf"
 };
 
 const copy = {
@@ -306,7 +306,7 @@ function renderContactLinks(language) {
   addContactButton(container, copy[language].emailLabel, CONTACT.email ? 'mailto:' + CONTACT.email : '');
   addContactButton(container, copy[language].linkedinLabel, CONTACT.linkedin, true);
   addContactButton(container, copy[language].githubLabel, CONTACT.github, true);
-  addContactButton(container, copy[language].cvLabel, CONTACT.cv, true);
+  addContactButton(container, copy[language].cvLabel, language === "en" ? "assets/CV_Lucas_San_Juan_EN.pdf" : CONTACT.cv, true);
   if (!container.children.length) {
     const note = document.createElement('span');
     note.className = 'contact-pending';
