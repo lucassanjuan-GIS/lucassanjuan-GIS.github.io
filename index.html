@@ -34,6 +34,27 @@
 
 </style>
   
+<style id="experience-css">
+.section-experience{padding:112px 0 125px;background:#0c1924;color:#edf2f0;border-top:1px solid rgba(139,228,204,.12)}
+.section-experience .section-topline{color:#9cb1b5}.section-experience .section-heading .muted{color:#7faaa2}
+.section-experience .section-number,.section-experience .section-kicker{color:#8be4cc}
+.exp-intro{display:grid;grid-template-columns:1fr .6fr;gap:55px;align-items:end;margin-bottom:46px}
+.exp-intro>p{font-size:14px;line-height:1.85;color:#a7bac0;max-width:380px;margin:0 0 9px}
+.exp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.exp-card{background:#142632;border:1px solid rgba(155,206,200,.18);padding:29px 24px;display:flex;flex-direction:column;min-height:340px;transition:transform .2s,border-color .2s}
+.exp-card:hover{transform:translateY(-4px);border-color:#75b7a9}
+.exp-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#8be4cc;font:700 9px var(--heading);letter-spacing:.8px}
+.exp-meta time{color:#98adb5;letter-spacing:0}
+.exp-card h3{margin:25px 0 7px;font:600 23px/1.25 var(--heading);letter-spacing:-.6px}
+.exp-org{color:#9bdbcb;font-size:12px;font-weight:600;margin:0 0 20px}
+.exp-card>p:not(.exp-org){color:#b2c4ca;font-size:13px;line-height:1.83;margin:0 0 24px}
+.exp-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.exp-tags span{font:600 10px var(--heading);border:1px solid rgba(139,228,204,.24);color:#afd0ce;padding:7px 9px}
+.exp-footer{margin-top:26px;border-top:1px solid rgba(185,210,213,.15);padding-top:20px;display:flex;gap:14px;justify-content:space-between;color:#9eb4be;font-size:12px}
+.exp-footer a{color:#8be4cc;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.exp-intro{grid-template-columns:1fr;gap:18px}.exp-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.section-experience{padding:80px 0}.exp-grid{grid-template-columns:1fr}.exp-card{min-height:0;padding:26px 22px}.exp-footer{flex-direction:column}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -48,6 +69,7 @@
         <a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a>
         <a href="#proyectos" data-i18n="navProjects">Proyectos</a>
         <a href="#competencias" data-i18n="navSkills">Competencias</a>
+        <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
         <a href="#trayectoria" data-i18n="navBackground">Trayectoria</a>
       </nav>
       <div class="header-actions">
@@ -57,7 +79,7 @@
       </div>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil" hidden>
-      <a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a><a href="#proyectos" data-i18n="navProjects">Proyectos</a><a href="#competencias" data-i18n="navSkills">Competencias</a><a href="#trayectoria" data-i18n="navBackground">Trayectoria</a><a href="#contacto" data-i18n="navContact">Contacto</a>
+      <a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a><a href="#proyectos" data-i18n="navProjects">Proyectos</a><a href="#competencias" data-i18n="navSkills">Competencias</a><a href="#experiencia" data-i18n="navExperience">Experiencia</a><a href="#trayectoria" data-i18n="navBackground">Trayectoria</a><a href="#contacto" data-i18n="navContact">Contacto</a>
     </nav>
   </header>
 
@@ -163,15 +185,28 @@
       </div>
     </section>
 
+
+    <section class="section section-experience" id="experiencia" aria-labelledby="experienceTitle">
+      <div class="container">
+        <div class="section-topline"><span class="section-number">04 / 05</span><span class="topline-rule"></span><span data-i18n="expEyebrow">EXPERIENCIA PROFESIONAL</span></div>
+        <div class="exp-intro"><div><p class="section-kicker"><span class="green-square"></span><span data-i18n="expKicker">TRAYECTORIA</span></p><h2 class="section-heading" id="experienceTitle"><span data-i18n="expHeading1">De los datos</span><br><span class="muted" data-i18n="expHeading2">a las decisiones.</span></h2></div><p data-i18n="expIntro">Experiencia en análisis de datos de producto e investigación territorial, desde la preparación de información hasta la comunicación de resultados.</p></div>
+        <div class="exp-grid">
+          <article class="exp-card"><div class="exp-meta"><span>DATA ANALYTICS</span><time>ENE 2026 — JUL 2026</time></div><h3 data-i18n="exp1Title">Analista de datos</h3><p class="exp-org">AI Labs · <span data-i18n="exp1Remote">Remoto</span></p><p data-i18n="exp1Body">Análisis de comportamiento y segmentación en una plataforma de IA con más de cinco millones de usuarios. Elaboración de indicadores, visualizaciones e informes para apoyar decisiones de producto.</p><div class="exp-tags"><span>Data analytics</span><span>KPIs</span><span>Reporting</span></div></article>
+          <article class="exp-card"><div class="exp-meta"><span>APPLIED RESEARCH</span><time>FEB 2024 — MAY 2024</time></div><h3 data-i18n="exp2Title">Técnico de apoyo a proyectos</h3><p class="exp-org" data-i18n="exp2Org">Universidad de La Laguna</p><p data-i18n="exp2Body">Tratamiento de información territorial y socioeconómica para investigación aplicada. Construcción de indicadores, cartografía, gráficos e informes técnicos.</p><div class="exp-tags"><span>GIS</span><span>Research</span><span>Mapping</span></div></article>
+          <article class="exp-card"><div class="exp-meta"><span>TERRITORIAL GIS</span><time>2023</time></div><h3 data-i18n="exp3Title">Prácticas en análisis territorial</h3><p class="exp-org" data-i18n="exp3Org">Cátedra de Turismo · Universidad de La Laguna</p><p data-i18n="exp3Body">Trabajo en regeneración urbana litoral mediante inventarios y matrices de diagnóstico. Preparación de cartografía y análisis geoespacial con QGIS.</p><div class="exp-tags"><span>QGIS</span><span>GIS</span><span data-i18n="exp3Tag">Territorio</span></div></article>
+        </div>
+        <div class="exp-footer"><span data-i18n="expLanguages">Idiomas: español nativo · inglés B2</span><a href="https://www.linkedin.com/in/lucas-san-juan-jordan/" target="_blank" rel="noopener noreferrer"><span data-i18n="expLinkedIn">Mi trayectoria en LinkedIn</span> ↗</a></div>
+      </div>
+    </section>
     <section class="section section-background" id="trayectoria" aria-labelledby="backgroundTitle">
       <div class="container">
-        <div class="section-topline"><span class="section-number">04 / 04</span><span class="topline-rule"></span><span data-i18n="backgroundTop">TRAYECTORIA Y FORMACIÓN</span></div>
+        <div class="section-topline"><span class="section-number">05 / 05</span><span class="topline-rule"></span><span data-i18n="backgroundTop">TRAYECTORIA Y FORMACIÓN</span></div>
         <div class="background-layout"><div><p class="section-kicker"><span class="green-square"></span><span data-i18n="backgroundKicker">FORMACIÓN</span></p><h2 class="section-heading" id="backgroundTitle"><span data-i18n="backgroundTitle1">Aprendizaje</span><br><span class="muted" data-i18n="backgroundTitle2">en evolución.</span></h2><p class="background-intro" data-i18n="backgroundIntro">Una base sólida en geografía y análisis social, reforzada con especialización técnica en herramientas y métodos geoespaciales.</p></div>
         <div class="timeline">
           <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span data-i18n="timeline1Meta">PRÓXIMA FORMACIÓN</span><span>GIRONA</span></div><h3 data-i18n="timeline1Title">Tecnologías de la Información Geográfica y Ciencia de Datos Espaciales</h3><p data-i18n="timeline1Desc">Máster de Formación Permanente · Universitat de Girona. Incorporación prevista; no presentado como título obtenido.</p></div>
           <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span data-i18n="timeline2Meta">FORMACIÓN DE POSGRADO</span><span>ULL</span></div><h3 data-i18n="timeline2Title">Análisis Aplicado a las Ciencias Sociales</h3><p data-i18n="timeline2Desc">Universidad de La Laguna · Formación en estadística, métodos cuantitativos y análisis de datos.</p></div>
           <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span data-i18n="timeline3Meta">FORMACIÓN UNIVERSITARIA</span><span>ULL</span></div><h3 data-i18n="timeline3Title">Grado en Geografía y Ordenación del Territorio</h3><p data-i18n="timeline3Desc">Universidad de La Laguna · Bases en geografía física y humana, análisis territorial y sistemas de información geográfica.</p></div>
-          <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span data-i18n="timeline4Meta">EXPERIENCIA APLICADA</span><span>ULL</span></div><h3 data-i18n="timeline4Title">Investigación y proyectos territoriales</h3><p data-i18n="timeline4Desc">Trabajos académicos y prácticas en análisis espacial, estudios ambientales y regeneración del litoral.</p></div>
+          <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-meta"><span data-i18n="timeline4Meta">FORMACIÓN COMPLEMENTARIA</span><span>DIGINNOVA</span></div><h3 data-i18n="timeline4Title">Innovación y competitividad · DIGINNOVA</h3><p data-i18n="timeline4Desc">Programa vinculado a la Universidad de La Laguna, actualmente en curso (2026–2027).</p></div>
         </div></div>
       </div>
     </section>
@@ -191,15 +226,15 @@
 /* Personalización: añade aquí tus enlaces reales cuando decidas publicarlos.
    Deja un campo vacío para que no se muestre un enlace sin configurar. */
 const CONTACT = {
-  email: "",
-  linkedin: "",
+  email: "lucasinformatica27@gmail.com",
+  linkedin: "https://www.linkedin.com/in/lucas-san-juan-jordan/",
   github: "https://github.com/lucassanjuan-GIS",
   cv: ""
 };
 
 const copy = {
   es: {
-    skip: "Saltar al contenido", navAbout: "Sobre mí", navProjects: "Proyectos", navSkills: "Competencias", navBackground: "Trayectoria", navContact: "Contacto",
+    skip: "Saltar al contenido", navAbout: "Sobre mí", navProjects: "Proyectos", navSkills: "Competencias", navExperience: "Experiencia", navBackground: "Trayectoria", navContact: "Contacto",
     heroEyebrow: "GEOGRAFÍA · DATOS · TERRITORIO", heroKicker: "ANALISTA GEOESPACIAL", heroTitle1: "Entender el", heroTitle2: "territorio.", heroTitle3: "Explicar los datos.",
     heroDescription: "Soy Lucas San Juan, geógrafo especializado en análisis territorial, sistemas de información geográfica y métodos cuantitativos. Conecto mapas, datos y contexto para abordar problemas del mundo real.",
     heroProjects: "Explorar proyectos", heroAbout: "Conoce mi perfil", heroStatus: "Enfocado en GIS, análisis espacial y oportunidades internacionales en remoto", heroBottom: "UNA MIRADA ESPACIAL", scroll: "DESLIZA PARA EXPLORAR",
@@ -218,11 +253,12 @@ const copy = {
     timeline1Meta: "PRÓXIMA FORMACIÓN", timeline1Title: "Tecnologías de la Información Geográfica y Ciencia de Datos Espaciales", timeline1Desc: "Máster de Formación Permanente · Universitat de Girona. Incorporación prevista; no presentado como título obtenido.",
     timeline2Meta: "FORMACIÓN DE POSGRADO", timeline2Title: "Análisis Aplicado a las Ciencias Sociales", timeline2Desc: "Universidad de La Laguna · Formación en estadística, métodos cuantitativos y análisis de datos.",
     timeline3Meta: "FORMACIÓN UNIVERSITARIA", timeline3Title: "Grado en Geografía y Ordenación del Territorio", timeline3Desc: "Universidad de La Laguna · Bases en geografía física y humana, análisis territorial y sistemas de información geográfica.",
-    timeline4Meta: "EXPERIENCIA APLICADA", timeline4Title: "Investigación y proyectos territoriales", timeline4Desc: "Trabajos académicos y prácticas en análisis espacial, estudios ambientales y regeneración del litoral.",
+    timeline4Meta: "FORMACIÓN COMPLEMENTARIA", timeline4Title: "Innovación y competitividad · DIGINNOVA", timeline4Desc: "Programa vinculado a la Universidad de La Laguna, actualmente en curso (2026–2027).",
+    expEyebrow:"EXPERIENCIA PROFESIONAL",expKicker:"TRAYECTORIA",expHeading1:"De los datos",expHeading2:"a las decisiones.",expIntro:"Experiencia en análisis de datos de producto e investigación territorial, desde la preparación de información hasta la comunicación de resultados.",exp1Title:"Analista de datos",exp1Remote:"Remoto",exp1Body:"Análisis de comportamiento y segmentación en una plataforma de IA con más de cinco millones de usuarios. Elaboración de indicadores, visualizaciones e informes para apoyar decisiones de producto.",exp2Title:"Técnico de apoyo a proyectos",exp2Org:"Universidad de La Laguna",exp2Body:"Tratamiento de información territorial y socioeconómica para investigación aplicada. Construcción de indicadores, cartografía, gráficos e informes técnicos.",exp3Title:"Prácticas en análisis territorial",exp3Org:"Cátedra de Turismo · Universidad de La Laguna",exp3Body:"Trabajo en regeneración urbana litoral mediante inventarios y matrices de diagnóstico. Preparación de cartografía y análisis geoespacial con QGIS.",exp3Tag:"Territorio",expLanguages:"Idiomas: español nativo · inglés B2",expLinkedIn:"Mi trayectoria en LinkedIn",
     contactOverline: "SIGUIENTE PASO / HABLEMOS", contactTitle1: "Los mejores proyectos", contactTitle2: "empiezan con una conversación.", contactDesc: "Interesado en GIS, ciencia de datos espaciales y proyectos de análisis territorial. Abierto a conectar con equipos y oportunidades profesionales, especialmente en remoto.", contactPending: "En la siguiente fase añadiremos aquí los enlaces de contacto y el CV.", footerLine: "Diseñado para explorar el territorio desde otra perspectiva.", backToTop: "VOLVER ARRIBA", emailLabel: "Enviar email", linkedinLabel: "LinkedIn", githubLabel: "GitHub", cvLabel: "Descargar CV", menuOpen: "Abrir menú", menuClose: "Cerrar menú"
   },
   en: {
-    skip: "Skip to content", navAbout: "About", navProjects: "Projects", navSkills: "Expertise", navBackground: "Background", navContact: "Contact",
+    skip: "Skip to content", navAbout: "About", navProjects: "Projects", navSkills: "Expertise", navExperience: "Experience", navBackground: "Background", navContact: "Contact",
     heroEyebrow: "GEOGRAPHY · DATA · TERRITORY", heroKicker: "GEOSPATIAL ANALYST", heroTitle1: "Understand the", heroTitle2: "landscape.", heroTitle3: "Explain the data.",
     heroDescription: "I'm Lucas San Juan, a geographer focused on territorial analysis, geographic information systems and quantitative methods. I connect maps, data and context to approach real-world challenges.",
     heroProjects: "Explore projects", heroAbout: "About my work", heroStatus: "Focused on GIS, spatial analytics and international remote opportunities", heroBottom: "A SPATIAL PERSPECTIVE", scroll: "SCROLL TO EXPLORE",
@@ -241,7 +277,8 @@ const copy = {
     timeline1Meta: "PLANNED STUDIES", timeline1Title: "Geographic Information Technologies and Spatial Data Science", timeline1Desc: "Continuing Education Master's · University of Girona. Planned enrolment; not presented as a completed degree.",
     timeline2Meta: "POSTGRADUATE STUDIES", timeline2Title: "Applied Analysis in the Social Sciences", timeline2Desc: "University of La Laguna · Training in statistics, quantitative methods and data analysis.",
     timeline3Meta: "UNIVERSITY DEGREE", timeline3Title: "Bachelor's Degree in Geography and Spatial Planning", timeline3Desc: "University of La Laguna · Physical and human geography, territorial analysis and geographic information systems.",
-    timeline4Meta: "APPLIED EXPERIENCE", timeline4Title: "Research and territorial projects", timeline4Desc: "Academic work and internships in spatial analysis, environmental studies and coastal regeneration.",
+    timeline4Meta: "CONTINUING EDUCATION", timeline4Title: "Innovation and Competitiveness · DIGINNOVA", timeline4Desc: "University of La Laguna programme, currently in progress (2026–2027).",
+    expEyebrow:"PROFESSIONAL EXPERIENCE",expKicker:"WORK EXPERIENCE",expHeading1:"From data",expHeading2:"to decisions.",expIntro:"Experience in product data analytics and territorial research, from data preparation to clear communication of findings.",exp1Title:"Data Analyst",exp1Remote:"Remote",exp1Body:"Analysed user behaviour and segmentation for an AI platform serving more than five million users. Created indicators, visualisations and reports to inform product decisions.",exp2Title:"Project Support Technician",exp2Org:"University of La Laguna",exp2Body:"Prepared and analysed territorial and socioeconomic information for applied research. Produced indicators, maps, charts and technical reports.",exp3Title:"Territorial Analysis Intern",exp3Org:"Tourism Chair · University of La Laguna",exp3Body:"Worked on coastal urban regeneration through inventories and diagnostic matrices. Prepared GIS datasets and thematic maps with QGIS.",exp3Tag:"Spatial planning",expLanguages:"Languages: native Spanish · English B2",expLinkedIn:"My experience on LinkedIn",
     contactOverline: "NEXT STEP / LET'S CONNECT", contactTitle1: "Great projects", contactTitle2: "start with a conversation.", contactDesc: "Interested in GIS, spatial data science and territorial analysis projects. Open to connecting with teams and professional opportunities, especially remote ones.", contactPending: "Contact links and a downloadable CV will be added in the next phase.", footerLine: "Built to explore the world from a different perspective.", backToTop: "BACK TO TOP", emailLabel: "Send email", linkedinLabel: "LinkedIn", githubLabel: "GitHub", cvLabel: "Download CV", menuOpen: "Open menu", menuClose: "Close menu"
   }
 };
